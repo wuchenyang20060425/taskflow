@@ -1,0 +1,9 @@
+.git
+*.zip
+data
+*.pdf
+*.txt
+
+benchmark-output
+.env
+*.pprof

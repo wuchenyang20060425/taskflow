@@ -1,0 +1,6 @@
+TaskFlow - PDF to Text Demo
+This is a sample text-based PDF for TaskFlow.
+The API receives a file and creates a task in Redis.
+A background worker converts the PDF into UTF-8 text.
+Use the /tasks/{id} endpoint to check status.
+

@@ -1,0 +1,11 @@
+/data/
+/benchmark-output/
+/result.txt
+*.exe
+*.log
+*.pprof
+__pycache__/
+.idea/
+.vscode/
+.DS_Store
+.env

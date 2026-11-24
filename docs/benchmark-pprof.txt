@@ -1,0 +1,76 @@
+File: api
+Build ID: 2cccc84e8eeed2e8b7fa1042c4af12c5e30d75d4
+Type: cpu
+Time: 2026-11-24 13:30:00 CST
+Duration: 5.08s, Total samples = 610ms (12.01%)
+Showing nodes accounting for 420ms, 68.85% of 610ms total
+Showing top 10 nodes out of 229
+      flat  flat%   sum%        cum   cum%
+     280ms 45.90% 45.90%      280ms 45.90%  internal/runtime/syscall.Syscall6
+      60ms  9.84% 55.74%       60ms  9.84%  runtime.futex
+      10ms  1.64% 57.38%       10ms  1.64%  bufio.(*Writer).Write
+      10ms  1.64% 59.02%       10ms  1.64%  context.(*timerCtx).Deadline
+      10ms  1.64% 60.66%       10ms  1.64%  fmt.(*fmt).fmtInteger
+      10ms  1.64% 62.30%       20ms  3.28%  log/slog.(*handleState).appendAttr
+      10ms  1.64% 63.93%       10ms  1.64%  log/slog.Value.Kind (inline)
+      10ms  1.64% 65.57%       10ms  1.64%  net.addrList.partition
+      10ms  1.64% 67.21%       20ms  3.28%  net/http.(*connReader).Read
+      10ms  1.64% 68.85%       10ms  1.64%  net/http.shouldClose
+File: worker
+Build ID: 18b85af09709443b903590e52af67e9b03a902e2
+Type: cpu
+Time: 2026-11-24 13:30:00 CST
+Duration: 5.04s, Total samples = 120ms ( 2.38%)
+Showing nodes accounting for 120ms, 100% of 120ms total
+Showing top 10 nodes out of 83
+      flat  flat%   sum%        cum   cum%
+      50ms 41.67% 41.67%       50ms 41.67%  internal/runtime/syscall.Syscall6
+      20ms 16.67% 58.33%       20ms 16.67%  runtime.futex
+      10ms  8.33% 66.67%       10ms  8.33%  runtime.(*m).snapshotAllp
+      10ms  8.33% 75.00%       10ms  8.33%  runtime.(*scavengerState).park
+      10ms  8.33% 83.33%       10ms  8.33%  runtime.gcTrigger.test
+      10ms  8.33% 91.67%       10ms  8.33%  runtime.suspendG
+      10ms  8.33%   100%       10ms  8.33%  runtime.tgkill
+         0     0%   100%       10ms  8.33%  bufio.NewReader
+         0     0%   100%       10ms  8.33%  bufio.NewReaderSize (inline)
+         0     0%   100%       20ms 16.67%  internal/poll.(*FD).Init
+File: api
+Build ID: 2cccc84e8eeed2e8b7fa1042c4af12c5e30d75d4
+Type: cpu
+Time: 2026-11-24 13:30:00 CST
+Duration: 5.08s, Total samples = 610ms (12.01%)
+Active filters:
+   focus=Client.*Do
+Showing nodes accounting for 120ms, 19.67% of 610ms total
+Showing top 10 nodes out of 60
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%      160ms 26.23%  main.run.(*Server).Handler.func2
+         0     0%     0%      160ms 26.23%  net/http.(*conn).serve
+         0     0%     0%      160ms 26.23%  net/http.HandlerFunc.ServeHTTP
+         0     0%     0%      160ms 26.23%  net/http.serverHandler.ServeHTTP
+         0     0%     0%      160ms 26.23%  taskflow/internal/api.(*Server).taskByID
+         0     0%     0%      160ms 26.23%  taskflow/internal/redisresp.(*Client).Do
+         0     0%     0%      160ms 26.23%  taskflow/internal/tasks.(*Repository).Get
+     120ms 19.67% 19.67%      120ms 19.67%  internal/runtime/syscall.Syscall6
+         0     0% 19.67%      100ms 16.39%  syscall.RawSyscall6
+         0     0% 19.67%       90ms 14.75%  syscall.Syscall
+File: worker
+Build ID: 18b85af09709443b903590e52af67e9b03a902e2
+Type: cpu
+Time: 2026-11-24 13:30:00 CST
+Duration: 5.04s, Total samples = 120ms ( 2.38%)
+Active filters:
+   focus=Client.*Do
+Showing nodes accounting for 40ms, 33.33% of 120ms total
+Showing top 10 nodes out of 36
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%       50ms 41.67%  main.main
+         0     0%     0%       50ms 41.67%  main.run
+         0     0%     0%       50ms 41.67%  runtime.main
+         0     0%     0%       50ms 41.67%  taskflow/internal/redisresp.(*Client).Do
+         0     0%     0%       50ms 41.67%  taskflow/internal/worker.Worker.Run
+      40ms 33.33% 33.33%       40ms 33.33%  internal/runtime/syscall.Syscall6
+         0     0% 33.33%       40ms 33.33%  net.(*Dialer).DialContext
+         0     0% 33.33%       40ms 33.33%  net.(*netFD).connect
+         0     0% 33.33%       40ms 33.33%  net.(*netFD).dial
+         0     0% 33.33%       40ms 33.33%  net.(*sysDialer).dialParallel
